@@ -16,3 +16,4 @@ require 'shallot'
 
 class Test::Unit::TestCase
 end
+
