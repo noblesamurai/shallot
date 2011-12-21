@@ -1,0 +1,66 @@
+= shallot
+
+shallot can lex and parse just enough Gherkin to give you:
+
+ {:feature=>"The name of the feature",
+  :background=>
+   ["\t\tEach step in the background",
+    "\t\tBut without any additional parsing",
+    "\t\tOr validation"],
+  :scenarios=>
+   [{:name=>"And each scenario",
+ :outline=>false,
+ :tags=>["shallot", "regression", "bug"],
+ :contents=>
+  ["\t\tWith tags, including those inherited",
+   "\t\tFrom the feature level tags"]},
+    {:name=>"As well as scenario outlines",
+ :outline=>true,
+ :tags=>["shallot", "feature"],
+ :contents=>
+  ["\t\tWith support for the following",
+   "\t\t\t\"\"\"",
+   "\t\t\tlong-quoted",
+   "\t\t\tsections",
+   "\t\t\t\"\"\"",
+   "\t\tWhile no extra <kind> for examples",
+   "\t\tExamples:",
+   "\t\t\t| kind    |",
+   "\t\t\t| parsing |",
+   "\t\t\t| lexing  |"]}]}
+
+The above results from calling Shallot.parse(f), where f is an open File
+handle on the following feature file:
+
+ @shallot
+ Feature: The name of the feature
+     This gets completely ignored.
+
+     Background:
+         Each step in the background
+         But without any additional parsing
+         Or validation
+
+     @regression @bug
+     Scenario: And each scenario
+         With tags, including those inherited
+         From the feature level tags
+
+     @feature
+     Scenario Outline: As well as scenario outlines
+         With support for the following
+             """
+             long-quoted
+             sections
+             """
+         While no extra <kind> for examples
+
+         Examples:
+             | kind    |
+             | parsing |
+             | lexing  |
+
+== Copyright
+
+Copyright (c) 2011 Noble Samurai. See LICENSE.txt for
+further details.

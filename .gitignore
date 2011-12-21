@@ -1,1 +1,7 @@
-.*.swp
+coverage
+rdoc
+doc
+.yardoc
+.bundle
+pkg
+Gemfile.lock
