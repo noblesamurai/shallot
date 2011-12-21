@@ -5,24 +5,30 @@
 
 Gem::Specification.new do |s|
   s.name = "shallot"
-  s.version = "0.1"
+  s.version = "0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anneli Cuss"]
   s.date = "2011-12-21"
-  s.description = "Takes a .feature file, gives you something easy to work with."
+  s.description = "shallot is a lexer/parser for Gherkin, the syntax used by Cucumber. It takes a .feature file and gives you something easy to work with."
   s.email = "opensource@noblesamurai.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md",
     "README.rdoc"
   ]
   s.files = [
+    ".document",
     "COPYING",
-    "README.md",
-    "lib/shallot.rb"
+    "Gemfile",
+    "LICENSE.txt",
+    "README.rdoc",
+    "Rakefile",
+    "lib/shallot.rb",
+    "shallot.gemspec",
+    "test/helper.rb",
+    "test/test_shallot.rb"
   ]
-  s.homepage = "http://github.com/anneli/shallot"
+  s.homepage = "http://github.com/noblesamurai/shallot"
   s.licenses = ["GPL-3"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
