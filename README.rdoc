@@ -6,14 +6,16 @@ shallot can lex and parse just enough Gherkin to give you:
   :background=>
    ["        Each step in the background",
     "        But without any additional parsing",
-    "        Or validation"],
+    "        Or validation",
+    ""],
   :scenarios=>
    [{:name=>"And each scenario",
      :outline=>false,
      :tags=>["shallot", "regression", "bug"],
      :contents=>
       ["        With tags, including those inherited",
-       "        From the feature level tags"]},
+       "        From the feature level tags",
+       ""]},
     {:name=>"As well as scenario outlines",
      :outline=>true,
      :tags=>["shallot", "feature"],
@@ -24,6 +26,7 @@ shallot can lex and parse just enough Gherkin to give you:
        "            sections",
        "            \"\"\"",
        "        While no extra <kind> for examples",
+       "",
        "        Examples:",
        "            | kind    |",
        "            | parsing |",
