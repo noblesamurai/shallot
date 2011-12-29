@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   gem.name = "shallot"
-  gem.version = "0.2"
+  gem.version = "0.3"
   gem.homepage = "http://github.com/noblesamurai/shallot"
   gem.license = "GPL-3"
   gem.summary = %Q{a lexer/parser for Gherkin}

@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "shallot"
-  s.version = "0.2"
+  s.version = "0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anneli Cuss"]
-  s.date = "2011-12-21"
+  s.date = "2011-12-29"
   s.description = "shallot is a lexer/parser for Gherkin, the syntax used by Cucumber. It takes a .feature file and gives you something easy to work with."
   s.email = "opensource@noblesamurai.com"
   s.extra_rdoc_files = [

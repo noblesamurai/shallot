@@ -85,8 +85,8 @@ class Shallot
       @qqq = nil
 
     elsif @qqq.nil? and [nil, ?#].include? line.strip[0]
-      # Blank or comment; outside triple-quote.
-      return
+      # Blank or comment; outside triple-quote.  Process as an empty line.
+      line = '' unless [:background, :scenario].include? @state
     end
 
     # Use state.
@@ -117,7 +117,7 @@ class Shallot
       @state = :feature
       @feature = feature
     
-    else
+    elsif line != ''
       # There shouldn't be anything else in here.
       raise Error, "unexpected line before feature start"
     end
@@ -204,7 +204,7 @@ class Shallot
   # Parses a line of tags, +line+, returning a list of downcased tags sans "@".
   # Returns +nil+ if the line didn't contain only tags (and at least one).
   def parse_tag_line line
-    if (tags = line.strip.split).all? {|w| w[0] == ?@}
+    if (tags = line.strip.split).all? {|w| w[0] == ?@} and tags.length > 0
       tags.map {|t| t[1..-1].downcase}
     end
   end

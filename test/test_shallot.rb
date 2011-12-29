@@ -41,14 +41,16 @@ $parsed =
    :background=>
     ["        Each step in the background",
      "        But without any additional parsing",
-     "        Or validation"],
+     "        Or validation",
+     ""],
    :scenarios=>
     [{:name=>"And each scenario",
       :outline=>false,
       :tags=>["shallot", "regression", "bug"],
       :contents=>
        ["        With tags, including those inherited",
-        "        From the feature level tags"],
+        "        From the feature level tags",
+        ""],
       :line=>11},
      {:name=>"As well as scenario outlines",
       :outline=>true,
@@ -60,6 +62,7 @@ $parsed =
         "            sections",
         "            \"\"\"",
         "        While no extra <kind> for examples",
+        "",
         "        Examples:",
         "            | kind    |",
         "            | parsing |",
